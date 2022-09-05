@@ -15,8 +15,10 @@ function App() {
     <>
       <Header />
       <Main>
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Routes baseName="/foods-react">
+          <Route index>
+            <Home />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contact />} />
           <Route path="/category/:name" element={<Category />} />
