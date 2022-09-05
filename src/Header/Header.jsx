@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <nav className="cyan darken-3">
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">
+        <Link to="/foods-react" className="brand-logo">
           React shop
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
