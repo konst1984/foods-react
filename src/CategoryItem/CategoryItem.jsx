@@ -22,7 +22,7 @@ const CategoryItem = ({
         <p>{cropText(strCategoryDescription, 60)}</p>
       </div>
       <div className="card-action">
-        <Link to={`/category/${strCategory}`} className="btn">
+        <Link to={`/foods-react/category/${strCategory}`} className="btn">
           Watch category
         </Link>
       </div>
