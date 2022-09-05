@@ -16,13 +16,12 @@ function App() {
       <Header />
       <Main>
         <Routes basename="/foods-react">
-          <Route path="/" element={<Home />}>
-            <Route path="/about" element={<About />} />
-            <Route path="/contacts" element={<Contact />} />
-            <Route path="/category/:name" element={<Category />} />
-            <Route path="/meal/:id" element={<Recipe />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contact />} />
+          <Route path="/category/:name" element={<Category />} />
+          <Route path="/meal/:id" element={<Recipe />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Main>
       <Footer />
