@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/konst1984/foods-react.git/static/css/main.b51b4fde.css",
-    "main.js": "/konst1984/foods-react.git/static/js/main.4b4b9cdd.js",
-    "index.html": "/konst1984/foods-react.git/index.html",
-    "main.b51b4fde.css.map": "/konst1984/foods-react.git/static/css/main.b51b4fde.css.map",
-    "main.4b4b9cdd.js.map": "/konst1984/foods-react.git/static/js/main.4b4b9cdd.js.map"
+    "main.css": "/foods-react/static/css/main.b51b4fde.css",
+    "main.js": "/foods-react/static/js/main.4b4b9cdd.js",
+    "index.html": "/foods-react/index.html",
+    "main.b51b4fde.css.map": "/foods-react/static/css/main.b51b4fde.css.map",
+    "main.4b4b9cdd.js.map": "/foods-react/static/js/main.4b4b9cdd.js.map"
   },
   "entrypoints": [
     "static/css/main.b51b4fde.css",
