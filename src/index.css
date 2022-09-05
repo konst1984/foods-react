@@ -5,9 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: mintcream;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+.content {
+  min-height: calc(100vh - 64px - 70px);
+  padding: 4.5rem 0;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-image {
+  max-width: 100%;
+  padding: 5px;
+}
+iframe{
+  max-width: 100%;
+}
+.card-content .card-title, h6{
+  font-weight: 600;
+}
+
+.card-content {
+  flex-grow: 1;
+  background-color: lavender;
+ }
+
+.describe{
+  padding-top: 10px;
+  white-space: break-spaces;
+}
+.title-recipe{
+  margin: 2rem 0 1.5rem;
+  font-weight: 600;
+}
+.centered {
+  margin: 20px 0;
+  border: 2px solid #a1c2e0;
+  background-color: aliceblue;
+}
+
+.btn-search {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
