@@ -15,7 +15,7 @@ function App() {
     <>
       <Header />
       <Main>
-        <Routes>
+        <Routes basename="/foods-react">
           <Route path="/foods-react" element={<Home />} />
           <Route path="/foods-react/about" element={<About />} />
           <Route path="/foods-react/contacts" element={<Contact />} />
