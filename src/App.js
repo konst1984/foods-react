@@ -16,11 +16,11 @@ function App() {
       <Header />
       <Main>
         <Routes basename="/foods-react">
-          <Route path="foods-react/" element={<Home />} />
-          <Route path="foods-react/about" element={<About />} />
-          <Route path="foods-react/contacts" element={<Contact />} />
-          <Route path="foods-react/category/:name" element={<Category />} />
-          <Route path="foods-react/meal/:id" element={<Recipe />} />
+          <Route path="/foods-react/" element={<Home />} />
+          <Route path="/foods-react/about" element={<About />} />
+          <Route path="/foods-react/contacts" element={<Contact />} />
+          <Route path="/foods-react/category/:name" element={<Category />} />
+          <Route path="/foods-react/meal/:id" element={<Recipe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Main>
