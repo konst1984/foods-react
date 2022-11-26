@@ -5,15 +5,15 @@ const Header = () => {
   return (
     <nav className="cyan darken-3">
       <div className="nav-wrapper">
-        <Link to="/foods-react" className="brand-logo">
+        <Link to="/" className="brand-logo">
           React shop
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <Link to="/foods-react/about">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/foods-react/contacts">Contacts</Link>
+            <Link to="/contacts">Contacts</Link>
           </li>
         </ul>
       </div>

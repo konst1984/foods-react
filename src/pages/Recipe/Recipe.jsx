@@ -56,6 +56,7 @@ const Recipe = () => {
                 )}`}
                 allowFullScreen
                 title={id}
+                loading="lazy"
               />
             </div>
           ) : null}

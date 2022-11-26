@@ -12,7 +12,7 @@ const MealItem = ({ idMeal, strMeal, strMealThumb }) => {
         <span className="card-title black-text">{strMeal}</span>
       </div>
       <div className="card-action">
-        <Link to={`/foods-react/meal/${idMeal}`} className="btn">
+        <Link to={`/meal/${idMeal}`} className="btn">
           Watch recipe
         </Link>
       </div>
