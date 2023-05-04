@@ -1,11 +1,8 @@
 import React from "react";
+import cn from "./Preloader.module.css";
 
 const Preloader = () => {
-  return (
-    <div className="progress">
-      <div className="indeterminate">Loading...</div>
-    </div>
-  );
+  return <span className={cn.loader}></span>;
 };
 
 export default Preloader;

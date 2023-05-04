@@ -50,7 +50,7 @@ const Recipe = () => {
             </tbody>
           </table>
           {recipe.strYoutube ? (
-            <div className="row">
+            <div>
               <h4 className={cn["title-recipe"]}>Video recipe</h4>
               <iframe
                 width="100%"
