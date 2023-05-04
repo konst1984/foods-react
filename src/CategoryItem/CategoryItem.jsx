@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import cn from "./CategoryItem.module.css";
 
 const CategoryItem = ({
   strCategory,
@@ -13,18 +14,14 @@ const CategoryItem = ({
       : text.substring(0, text.indexOf(" ", cropNumber)).trim() + " ...";
   };
   return (
-    <div className="card">
-      <div className="card-image">
+    <div className={cn.card}>
+      <div className={cn["card-image"]}>
         <img src={strCategoryThumb} alt="" />
+        <Link to={`/category/${strCategory}`} className={cn.link} />
       </div>
-      <div className="card-content">
-        <span className="card-title black-text">{strCategory}</span>
+      <div className={cn["card-content"]}>
+        <span className={cn["card-title"]}>{strCategory}</span>
         <p>{cropText(strCategoryDescription, 60)}</p>
-      </div>
-      <div className="card-action">
-        <Link to={`/category/${strCategory}`} className="btn">
-          Watch category
-        </Link>
       </div>
     </div>
   );

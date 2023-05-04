@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import cn from "./Header.module.css";
+import { ThemeSwitcher } from "../ThemeSwicher";
 
 const Header = () => {
   return (
-    <nav className="cyan darken-3">
-      <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">
-          React shop
+    <nav className={cn.nav}>
+      <div className={`container ${cn.nav__wrapper}`}>
+        <Link to="/" className={cn["brand-logo"]}>
+          Food recipes
         </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contacts">Contacts</Link>
+            <ThemeSwitcher />
           </li>
         </ul>
       </div>

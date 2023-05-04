@@ -2,29 +2,23 @@ import React, { useState, useEffect } from "react";
 import { getAllCategories } from "../../api";
 import { Preloader } from "../../Preloader";
 import { CategoryList } from "../../CategoryList";
-import Search from "../../Search/Search";
-import { useLocation, useNavigate } from "react-router-dom";
+
+import debounce from "lodash.debounce";
+import { Search } from "../../Search";
 
 const Home = () => {
   const [catalog, setCatalog] = useState([]);
   const [filteredCatalog, setFilteredCatalog] = useState([]);
-  const { pathname, search } = useLocation();
-  const navigate = useNavigate();
-  const handleSearch = (str) => {
+  const [search, setSearch] = useState("");
+
+  const handleSearch = debounce((str) => {
+    setSearch(str);
     setFilteredCatalog(
-      catalog.filter((item) =>
+      filteredCatalog.filter((item) =>
         item.strCategory.toLowerCase().includes(str.toLowerCase())
       )
     );
-    navigate(
-      {
-        pathname,
-        search: `?search=${str}`,
-      },
-      // `${pathname}?search=${str}`,
-      { replace: true }
-    );
-  };
+  }, 500);
 
   useEffect(() => {
     getAllCategories().then((data) => {
@@ -32,17 +26,16 @@ const Home = () => {
       setFilteredCatalog(
         search
           ? data.categories.filter((item) =>
-              item.strCategory
-                .toLowerCase()
-                .includes(search.split("=")[1].toLowerCase())
+              item.strCategory.toLowerCase().startsWith(search.toLowerCase())
             )
           : data.categories
       );
     });
   }, [search]);
+
   return (
     <>
-      <Search cb={handleSearch} />
+      <Search handleSearch={handleSearch} />
       {!catalog.length ? (
         <Preloader />
       ) : (

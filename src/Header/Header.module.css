@@ -1,0 +1,23 @@
+.nav{
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	background: #141E30;
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);
+	background: linear-gradient(to right, #243B55, #141E30);
+	width: 100%;
+}
+.nav__wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.brand-logo{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+	color: white;
+	padding: 5px;
+}

@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { MealItem } from "../MealItem";
+import cn from "./MealList.module.css";
 
 const MealList = ({ meals }) => {
   return (
-    <div className="list">
+    <div className={cn.list_meal}>
       {meals.map((meal) => (
         <MealItem key={meal.idMeal} {...meal} />
       ))}

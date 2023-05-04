@@ -1,20 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import cn from "./MealItem.module.css";
 
 const MealItem = ({ idMeal, strMeal, strMealThumb }) => {
   return (
-    <div className="card">
-      <div className="card-image">
+    <div className={`${cn.card}`}>
+      <div className={cn["card-image"]}>
         <img src={strMealThumb} alt="" />
-      </div>
-      <div className="card-content">
-        <span className="card-title black-text">{strMeal}</span>
-      </div>
-      <div className="card-action">
-        <Link to={`/meal/${idMeal}`} className="btn">
-          Watch recipe
-        </Link>
+        <Link to={`/meal/${idMeal}`} className={cn.link} data-title={strMeal} />
       </div>
     </div>
   );

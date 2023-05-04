@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { getMealById } from "../../api";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Preloader } from "../../Preloader";
+import cn from "./Recipe.module.css";
+import { ButtonBack } from "../../ButtonBack";
 
 const Recipe = () => {
   const { id } = useParams();
-  const goBack = useNavigate();
   const [recipe, setRecipe] = useState({});
+
   useEffect(() => {
     getMealById(id).then((data) => {
       setRecipe(data.meals[0]);
@@ -15,16 +17,18 @@ const Recipe = () => {
 
   return recipe ? (
     <>
-      <div className="card">
-        <div className="card-image">
+      <div className={cn.card}>
+        <div className={cn["card-image"]}>
           <img src={recipe.strMealThumb} alt="" />
+          <div className={cn["card-describe"]}>
+            <h3 className={cn["card-title"]}>{recipe.strMeal}</h3>
+            <h4>Category: {recipe.strCategory}</h4>
+            {recipe.strArea ? <h4>Area: {recipe.strArea}</h4> : null}
+            <p className={cn.describe}>{recipe.strInstructions}</p>
+          </div>
         </div>
-        <div className="card-content">
-          <span className="card-title black-text">{recipe.strMeal}</span>
-          <h6>Category: {recipe.strCategory}</h6>
-          {recipe.strArea ? <h6>Area: {recipe.strArea}</h6> : null}
-          <p className="describe">{recipe.strInstructions}</p>
-          <table className="centered">
+        <div className={cn["card-recipe"]}>
+          <table className={cn.centered}>
             <thead>
               <tr>
                 <th>Ingredient</th>
@@ -47,7 +51,7 @@ const Recipe = () => {
           </table>
           {recipe.strYoutube ? (
             <div className="row">
-              <h5 className="title-recipe">Video recipe</h5>
+              <h4 className={cn["title-recipe"]}>Video recipe</h4>
               <iframe
                 width="100%"
                 height="500px"
@@ -62,9 +66,7 @@ const Recipe = () => {
           ) : null}
         </div>
       </div>
-      <button className="btn" onClick={() => goBack(-1)}>
-        Go back
-      </button>
+      <ButtonBack />
     </>
   ) : (
     <Preloader />

@@ -1,33 +1,25 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Search = ({ cb }) => {
+import cn from "./Search.module.css";
+
+const Search = ({ handleSearch }) => {
   const [value, setValue] = useState("");
 
-  const handleKey = (e) => {
-    if (e.key === "Enter") {
-      handleSubmit();
-    }
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    handleSearch(e.target.value);
   };
 
-  const handleSubmit = () => {
-    cb(value);
-  };
   return (
-    <div className="row">
-      <div className="input-field col s12">
-        <input
-          type="search"
-          id="search-field"
-          placeholder="search"
-          onKeyDown={handleKey}
-          onChange={(e) => setValue(e.target.value)}
-          value={value}
-        />
-        <button className="btn btn-search" onClick={handleSubmit}>
-          Search
-        </button>
-      </div>
+    <div className={cn.row}>
+      <input
+        type="text"
+        className={cn["input-field"]}
+        placeholder="search category"
+        value={value}
+        onChange={handleChange}
+      />
     </div>
   );
 };

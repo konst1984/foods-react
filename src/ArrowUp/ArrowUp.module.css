@@ -1,0 +1,27 @@
+.arrow-box{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top:80%;
+	right: 50px;
+	background-color: #282c34;
+	border: 2px solid #282c34;
+	border-radius: 50%;
+	font-size: 30px;
+	color:white;
+	transition: all 0.3s ease-in-out;
+}
+.image{
+	padding: 5px;
+}
+
+.arrow-box:hover,
+.arrow-box:focus-visible{
+	scale:1.1;
+	background-color: white;
+	color:#282c34;
+}
+
+.arrow-box:active{
+	scale:0.9;
+}
