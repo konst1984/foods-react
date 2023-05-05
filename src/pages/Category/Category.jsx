@@ -18,7 +18,6 @@ const Category = () => {
   }, [name]);
   return (
     <ErrorWrapper error={error}>
-      >
       <ButtonBack />
       {meals.length ? <MealList meals={meals} /> : <Preloader />}
     </ErrorWrapper>
