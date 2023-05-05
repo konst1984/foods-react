@@ -1,4 +1,4 @@
-# Foods React Project SPA
+# Foods recipes React Project SPA
 
 This project  [link](https://konst1984.github.io/foods-react/).
 
