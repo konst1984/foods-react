@@ -1,0 +1,19 @@
+
+.error{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: clamp(1.2rem, 2vw, 2.5rem);
+	background-color: #eabbbb;
+	color: darkred;
+	font-weight: bold;
+	border-radius: 100px;
+	text-transform: uppercase;
+}
+.error span{
+	display: block;
+}
